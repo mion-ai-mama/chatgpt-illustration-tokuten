@@ -434,9 +434,11 @@ button:focus-visible {
   font-weight: 700;
 }
 
-.step-card__text {
-  margin: 0;
+.usage-note {
+  text-align: center;
   color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin: 0 0 1.5rem;
 }
 
 .callout {
@@ -547,16 +549,6 @@ button:focus-visible {
   word-break: break-all;
 }
 
-.case__input-note {
-  background: var(--color-beige);
-  border-radius: var(--radius-sm);
-  padding: 1rem 1.2rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-  margin: 0 0 1.75rem;
-}
-
 .case__meta {
   display: grid;
   grid-template-columns: 1fr;
@@ -637,6 +629,111 @@ button:focus-visible {
   color: var(--color-text);
   font-size: 0.92rem;
   line-height: 1.8;
+}
+
+/* ============================================================
+   完全おまかせ版／カスタマイズ版 の選択カード
+============================================================ */
+
+.prompt-choice {
+  margin-bottom: 2rem;
+}
+
+.prompt-choice__intro {
+  text-align: center;
+  margin: 0 0 1.25rem;
+}
+
+.prompt-choice__intro-heading {
+  font-family: var(--font-serif-jp);
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.prompt-choice__intro p {
+  margin: 0.2em 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.prompt-choice__intro strong {
+  color: var(--color-terracotta-dark);
+}
+
+.prompt-option-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem 1.1rem;
+}
+
+@media (min-width: 700px) {
+  .prompt-option-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.prompt-option {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: 0 12px 28px -20px var(--color-shadow);
+}
+
+.prompt-option--auto {
+  border-color: var(--color-terracotta);
+}
+
+.prompt-option__badge {
+  position: absolute;
+  top: -0.7rem;
+  left: 1.4rem;
+  background: var(--color-terracotta);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.3em 0.9em;
+  border-radius: 999px;
+}
+
+.prompt-option__eyebrow {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin: 0.3rem 0 0.2rem;
+  text-align: center;
+}
+
+.prompt-option__title {
+  font-family: var(--font-serif-jp);
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 0.3rem;
+}
+
+.prompt-option__desc {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin: 0 0 1rem;
+}
+
+.prompt-option__note {
+  background: var(--color-beige);
+  border-radius: var(--radius-sm);
+  padding: 0.8rem 1rem;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin: 0 0 1rem;
+}
+
+.prompt-option__caution {
+  font-size: 0.78rem;
+  color: var(--color-terracotta-dark);
+  margin: 0.9rem 0 0;
+  text-align: center;
 }
 
 /* ============================================================
