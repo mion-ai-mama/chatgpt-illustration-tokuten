@@ -3,20 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AIで人気動画を分析する方法｜コピペで使える3STEPガイド</title>
-<meta name="description" content="人気の動画をChatGPTに見せるだけで「なぜ伸びたのか」「次の企画」が分かる。AI初心者さんでもすぐ試せる3STEPガイドです。コピペで使えるプロンプト付き。">
+<title>写真から仕事に使えるデザインへ｜ChatGPTイラスト活用プロンプト集</title>
+<meta name="description" content="写真を4つのテイストのイラストへ変換し、ポスター、フライヤー、不動産ホームページ、ブログ素材へ展開するChatGPTプロンプト集です。">
+
+<!-- 公開URL確定後もこのままでOK（GitHub Pagesの公開URLです） -->
+<link rel="canonical" href="https://mion-ai-mama.github.io/chatgpt-illustration-tokuten/">
 
 <!-- OGP（SNSでシェアされたときの表示設定） -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="AIで人気動画を分析する方法｜コピペで使える3STEPガイド">
-<meta property="og:description" content="人気の動画をChatGPTに見せるだけで「なぜ伸びたのか」「次の企画」が分かる。AI初心者さんでもすぐ試せる3STEPガイドです。">
-<meta property="og:image" content="https://mion-ai-mama.github.io/instagram-tokuten-template/assets/images/video-poster.jpg">
-<meta property="og:url" content="https://mion-ai-mama.github.io/instagram-tokuten-template/">
+<meta property="og:title" content="写真から仕事に使えるデザインへ｜ChatGPTイラスト活用プロンプト集">
+<meta property="og:description" content="写真を4つのテイストのイラストへ変換し、ポスター、フライヤー、不動産ホームページ、ブログ素材へ展開するChatGPTプロンプト集です。">
+<meta property="og:image" content="https://mion-ai-mama.github.io/chatgpt-illustration-tokuten/assets/ogp.jpg">
+<meta property="og:url" content="https://mion-ai-mama.github.io/chatgpt-illustration-tokuten/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#cf8a92">
+<meta name="theme-color" content="#B86143">
 
 <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -27,253 +35,675 @@
   <!-- ============================================================
        1. ファーストビュー
   ============================================================ -->
-  <section class="hero" id="hero" aria-label="ページ紹介">
+  <header class="hero">
     <div class="hero__inner">
-      <p class="hero__label">AI初心者さん向け</p>
+      <p class="hero__eyebrow">AI初心者さん向け・写真活用プロンプト集</p>
       <h1 class="hero__title">
-        AIで人気動画を<br>分析する方法
+        写真が、仕事に使えるデザインに変わる<br>
+        <span class="hero__title-en">ChatGPT イラスト活用プロンプト集</span>
       </h1>
-      <p class="hero__subtitle">
-        コピペで使える<br>3STEPガイド
+      <div class="hero__lead">
+        <p>何気なく撮った写真も、ChatGPTを使えば、イラストやポスター、イベント告知、ホームページ、ブログ素材へ展開できます。</p>
+        <p>この特典では、写真を4つの異なるテイストのイラストへ変換するプロンプトと、完成したイラストを実際のデザインに活用するプロンプトをまとめました。デザイン経験がなくても大丈夫。使いたいプロンプトをコピーして、自分の写真と一緒にChatGPTへ送るだけです。</p>
+      </div>
+      <p class="hero__notice">
+        このページの作品例に登場する店舗名・イベント名・ブランド名・会社名は、すべて制作例のために作成した架空のものです。
       </p>
-      <p class="hero__desc">
-        人気の動画をChatGPTに見せると、<br>
-        「なぜ伸びたのか」や<br>
-        「次にどんな企画を作ればいいのか」を<br>
-        初心者にも分かりやすく整理してもらえます。
-      </p>
-      <a class="btn btn--primary btn--large" href="#step1" data-scroll>
-        3STEPを見てみる
-      </a>
+      <a class="btn btn--primary" href="#toc" data-scroll>目次を見る</a>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       目次
+  ============================================================ -->
+  <nav class="toc" id="toc" aria-label="目次">
+    <div class="toc__inner">
+      <p class="toc__heading">目次</p>
+      <ol class="toc__list">
+        <li><a href="#can-do">この特典でできること</a></li>
+        <li><a href="#usage">基本の使い方</a></li>
+        <li><a href="#case-1">作例1｜カフェ写真 → フラットイラスト → ポスター</a></li>
+        <li><a href="#case-2">作例2｜週末マルシェ → ガッシュ風イラスト → フライヤー</a></li>
+        <li><a href="#case-3">作例3｜リビング写真 → 建築ミニチュア → 不動産ホームページ</a></li>
+        <li><a href="#case-4">作例4｜人物写真 → 線画＋水彩 → ブログのアイキャッチ</a></li>
+        <li><a href="#tips">うまく作るための共通ポイント</a></li>
+        <li><a href="#fix-prompts">文字が崩れたときの対処法</a></li>
+        <li><a href="#caution">利用時の注意</a></li>
+        <li><a href="#summary">まとめ</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       2. この特典でできること
+  ============================================================ -->
+  <section class="section" id="can-do" aria-labelledby="can-do-heading">
+    <div class="section__inner">
+      <h2 class="section__heading" id="can-do-heading">この特典でできること</h2>
+      <ul class="can-do-grid">
+        <li class="can-do-card">
+          <span class="can-do-card__icon" aria-hidden="true">🖼️</span>
+          <p>手元の写真を、4つの異なるテイストのイラストに変換できる</p>
+        </li>
+        <li class="can-do-card">
+          <span class="can-do-card__icon" aria-hidden="true">📐</span>
+          <p>完成したイラストを、ポスター・フライヤー・ホームページ・ブログ素材に展開できる</p>
+        </li>
+        <li class="can-do-card">
+          <span class="can-do-card__icon" aria-hidden="true">📋</span>
+          <p>コピペで使えるプロンプトなので、専門知識がなくても再現できる</p>
+        </li>
+        <li class="can-do-card">
+          <span class="can-do-card__icon" aria-hidden="true">✏️</span>
+          <p>「どこを書き換えるか」が分かるので、自分の写真・用途にすぐ応用できる</p>
+        </li>
+      </ul>
     </div>
   </section>
 
   <!-- ============================================================
-       実例動画セクション
+       3. 基本の使い方
   ============================================================ -->
-  <section class="section" id="example-video" aria-labelledby="example-video-heading">
-    <div class="section__inner reveal">
-      <h2 class="section__heading" id="example-video-heading">実際に作った動画はこちら</h2>
-      <div class="video-card">
-        <video
-          id="example-video-player"
-          class="video-card__player"
-          controls
-          preload="none"
-          playsinline
-          poster="assets/images/video-poster.jpg"
-          aria-label="AIで動画分析を行い制作した実例動画">
-          <source src="assets/videos/example.mp4" type="video/mp4">
-          <p class="video-card__fallback">
-            動画を読み込めませんでした。ブラウザや通信環境をご確認いただくか、時間をおいて再度お試しください。
-          </p>
-        </video>
-        <p class="video-card__caption">
-          この動画は、<br>
-          人気動画の構成や見せ方をAIで分析し、<br>
-          その結果を参考に作成した実例です。<br><br>
-          元の動画をそのまま真似するのではなく、<br>
-          分析したポイントを自分の企画に応用しています。
-        </p>
+  <section class="section section--soft" id="usage" aria-labelledby="usage-heading">
+    <div class="section__inner">
+      <h2 class="section__heading" id="usage-heading">基本の使い方</h2>
+      <div class="step-grid">
+        <div class="step-card">
+          <p class="step-card__number">STEP 1</p>
+          <h3 class="step-card__title">写真を用意する</h3>
+          <p class="step-card__text">被写体が見やすく、明るい写真がおすすめです。</p>
+        </div>
+        <div class="step-card">
+          <p class="step-card__number">STEP 2</p>
+          <h3 class="step-card__title">イラスト化する</h3>
+          <p class="step-card__text">写真をChatGPTへアップロードし、作りたいテイストのプロンプトを送ります。</p>
+        </div>
+        <div class="step-card">
+          <p class="step-card__number">STEP 3</p>
+          <h3 class="step-card__title">デザインに展開する</h3>
+          <p class="step-card__text">完成したイラストを再度添付し、ポスターやホームページ用のプロンプトを送ります。</p>
+        </div>
+      </div>
+      <div class="callout">
+        <p>一度に全部作ろうとせず、<br>「写真からイラスト」→「イラストからデザイン」の2回に分けるのがポイントです。</p>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       3. メインプロンプト（実例動画の直後に表示）
+       作例1：カフェ写真 → フラットイラスト → ポスター
   ============================================================ -->
-  <section class="section section--soft" id="main-prompt" aria-labelledby="main-prompt-heading">
-    <div class="section__inner reveal">
-      <h2 class="section__heading" id="main-prompt-heading">この指示文をコピーして使ってください</h2>
-      <p class="section__desc">下の文章をコピーして、<br>スクショと一緒にChatGPTへ送ってください。</p>
+  <section class="section case" id="case-1" aria-labelledby="case-1-heading">
+    <div class="section__inner">
+      <p class="case__number">01</p>
+      <h2 class="case__heading" id="case-1-heading">カフェや飲食店に<br>やさしいフラットイラスト</h2>
+      <p class="case__desc">
+        ケーキやドリンクなどの商品写真を、温かみのある手描き風のフラットイラストへ。
+        完成したイラストは、季節限定メニューや店内ポスターなどに活用できます。
+      </p>
 
-      <div class="prompt-box">
-        <pre class="prompt-box__text" id="main-prompt-text">添付したスクショは
-YouTubeで人気の動画です。
+      <div class="compare-grid">
+        <figure class="compare-item">
+          <p class="compare-item__label">元の写真</p>
+          <div class="compare-item__frame" data-placeholder="assets/cafe-photo.jpg">
+            <img src="assets/cafe-photo.jpg" alt="カフェのケーキとドリンクの元写真" loading="lazy">
+          </div>
+        </figure>
+        <figure class="compare-item">
+          <p class="compare-item__label">イラストに変換</p>
+          <div class="compare-item__frame" data-placeholder="assets/cafe-illustration.jpg">
+            <img src="assets/cafe-illustration.jpg" alt="カフェの商品を手描き風フラットイラストに変換した作例" loading="lazy">
+          </div>
+        </figure>
+        <figure class="compare-item">
+          <p class="compare-item__label">デザインに活用</p>
+          <div class="compare-item__frame" data-placeholder="assets/cafe-poster.jpg">
+            <img src="assets/cafe-poster.jpg" alt="カフェのイラストを使った季節限定メニューのポスター作例" loading="lazy">
+          </div>
+        </figure>
+      </div>
 
-以下を分析してください。
+      <p class="case__input-note">
+        【入力項目】の内容を、自分の写真や用途に合わせて書き換えてください。<br>
+        迷う項目は「おまかせ」と入力しても使えます。
+      </p>
 
-・この動画が伸びた理由
-・ターゲット
-・冒頭3秒の工夫
-・構成
-・視聴維持率が高そうなポイント
-・この動画を参考にした新しい企画を10個考えてください。
+      <div class="prompt-card">
+        <h3 class="prompt-card__title">プロンプトA：写真をフラットイラストにする</h3>
+        <div class="prompt-card__box">
+          <pre class="prompt-card__text" id="prompt-case1-a">アップロードした写真を、温かみのある手描き風のフラットイラストへ変換してください。
 
-初心者にも分かるように解説してください。</pre>
-        <button
-          type="button"
-          class="btn btn--primary copy-btn"
-          data-copy-target="main-prompt-text"
-          aria-label="メインプロンプトの指示文をコピーする">
-          <span class="copy-btn__label">この指示文をコピーする</span>
-          <span class="copy-btn__done" role="status" aria-live="polite">コピーしました</span>
+【入力項目】
+使用目的：（例：カフェのメニュー、SNS、ホームページ素材）
+希望する雰囲気：（例：明るい、上品、親しみやすい）
+希望する配色：（未入力の場合は写真から抽出）
+残したい要素：（被写体、配置、小物など）
+背景：（残す／簡略化／単色／おまかせ）
+画像比率：（例：縦4:5、正方形、横16:9）
+
+【作成ルール】
+写真の主役、個数、形、色、位置関係を可能な限り維持してください。
+被写体が一目で分かる、シンプルで洗練された構図にしてください。
+細い手描きの輪郭線、平面的で柔らかな色面、わずかな紙の質感を使ってください。
+写真の光や空気感を参考にしながら、背景は主役が引き立つよう整理してください。
+商品や人物を勝手に追加・削除しないでください。
+写真風、3D風、CG風、過度に写実的な表現、水彩のにじみが強すぎる表現は避けてください。
+文字、ロゴ、署名、透かしは追加しないでください。
+後から文字やレイアウトを加えられる、イラスト素材単体として仕上げてください。</pre>
+        </div>
+        <button type="button" class="btn btn--copy copy-btn" data-copy-target="prompt-case1-a">
+          <span class="copy-btn__label">コピーする</span>
+          <span class="copy-btn__done">コピーしました！</span>
+        </button>
+      </div>
+
+      <div class="prompt-card">
+        <h3 class="prompt-card__title">プロンプトB：イラストをポスターにする</h3>
+        <div class="prompt-card__box">
+          <pre class="prompt-card__text" id="prompt-case1-b">アップロードしたイラストをメインビジュアルとして使用し、内容と用途に合った高品質な広告ポスターを作成してください。
+
+【入力項目】
+ポスターの用途：
+メインタイトル：
+サブタイトル：
+ブランド名・店舗名：
+補足ラベル：
+希望する雰囲気：
+画像比率：（例：縦3:4）
+
+【作成ルール】
+元イラストの主役、形、色、配置、輪郭線、描画テイストを可能な限り維持してください。
+元画像を四角い枠のまま貼り付けず、背景、余白、文字と自然に統合してください。
+主役を大きく見せ、タイトル、ビジュアル、補足情報へ自然に視線が流れる構成にしてください。
+イラストから代表色を抽出し、背景や文字色へ使用してください。
+海外のデザインスタジオやライフスタイルブランドの広告を思わせる、上品で現代的なエディトリアルデザインにしてください。
+入力した文字だけを正確に使用し、未入力の場合は不要な文字を追加しないでください。
+写真風、3D風、過剰な装飾、チラシ風の派手な配色、意味不明な文字、実在ロゴ、透かし、壁や額縁のモックアップは避けてください。
+ポスター単体を正面から見た状態で出力してください。</pre>
+        </div>
+        <button type="button" class="btn btn--copy copy-btn" data-copy-target="prompt-case1-b">
+          <span class="copy-btn__label">コピーする</span>
+          <span class="copy-btn__done">コピーしました！</span>
+        </button>
+      </div>
+
+      <div class="case__meta">
+        <div class="case__meta-block">
+          <p class="case__meta-label">今回入力した内容</p>
+          <ul>
+            <li>用途：カフェの季節限定メニューの店内ポスター</li>
+            <li>タイトル：STRAWBERRY AFTERNOON</li>
+            <li>商品：Strawberry Shortcake &amp; Strawberry Lemon Soda</li>
+            <li>店舗名：LUMINA CAFE</li>
+            <li>雰囲気：明るく上品で、春らしい海外カフェ風</li>
+          </ul>
+        </div>
+        <div class="case__meta-block">
+          <p class="case__meta-label">向いている用途</p>
+          <p>カフェメニュー／店内ポスター／ショップカード／SNS告知／商品紹介</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       作例2：週末マルシェ → ガッシュ風イラスト → フライヤー
+  ============================================================ -->
+  <section class="section section--soft case" id="case-2" aria-labelledby="case-2-heading">
+    <div class="section__inner">
+      <p class="case__number">02</p>
+      <h2 class="case__heading" id="case-2-heading">イベントの告知に<br>温かみのあるガッシュ風イラスト</h2>
+      <p class="case__desc">
+        風景やイベント会場の写真を、絵本のようなガッシュ・不透明水彩風のイラストへ。
+        植物や自然、地域イベントのやさしい空気感を伝えるフライヤーに向いています。
+      </p>
+
+      <div class="compare-grid">
+        <figure class="compare-item">
+          <p class="compare-item__label">元の写真</p>
+          <div class="compare-item__frame" data-placeholder="assets/market-photo.jpg">
+            <img src="assets/market-photo.jpg" alt="週末マルシェ会場の元写真" loading="lazy">
+          </div>
+        </figure>
+        <figure class="compare-item">
+          <p class="compare-item__label">イラストに変換</p>
+          <div class="compare-item__frame" data-placeholder="assets/market-illustration.jpg">
+            <img src="assets/market-illustration.jpg" alt="マルシェ会場をガッシュ風イラストに変換した作例" loading="lazy">
+          </div>
+        </figure>
+        <figure class="compare-item">
+          <p class="compare-item__label">デザインに活用</p>
+          <div class="compare-item__frame" data-placeholder="assets/market-flyer.jpg">
+            <img src="assets/market-flyer.jpg" alt="マルシェのイラストを使ったイベントフライヤー作例" loading="lazy">
+          </div>
+        </figure>
+      </div>
+
+      <p class="case__input-note">
+        【入力項目】の内容を、自分の写真や用途に合わせて書き換えてください。<br>
+        迷う項目は「おまかせ」と入力しても使えます。
+      </p>
+
+      <div class="prompt-card">
+        <h3 class="prompt-card__title">プロンプトA：写真をガッシュ風イラストにする</h3>
+        <div class="prompt-card__box">
+          <pre class="prompt-card__text" id="prompt-case2-a">アップロードした写真を、温かみのあるガッシュ・不透明水彩風のエディトリアルイラストへ変換してください。
+
+【入力項目】
+使用目的：
+希望する雰囲気：
+希望する季節感：
+残したい人物・建物・商品・植物：
+簡略化してよい要素：
+画像比率：
+
+【作成ルール】
+写真の構図、主な被写体、人物の人数、位置関係、会場の特徴を可能な限り維持してください。
+不透明水彩を重ねたようなマットな色面、筆の跡、柔らかな紙の質感を表現してください。
+細部を写実的に描き込みすぎず、光、季節、空気感が伝わるよう整理してください。
+自然な明るさと落ち着いた色調で、上品な絵本やライフスタイル誌の挿絵のように仕上げてください。
+人物の顔は細かく描き込みすぎず、自然な後ろ姿や横顔として表現してください。
+被写体、商品、人物を勝手に追加・削除しないでください。
+写真風、3D風、アニメ風、輪郭の強いポップアート、派手な彩度は避けてください。
+文字、ロゴ、署名、透かしは入れないでください。</pre>
+        </div>
+        <button type="button" class="btn btn--copy copy-btn" data-copy-target="prompt-case2-a">
+          <span class="copy-btn__label">コピーする</span>
+          <span class="copy-btn__done">コピーしました！</span>
+        </button>
+      </div>
+
+      <div class="prompt-card">
+        <h3 class="prompt-card__title">プロンプトB：イラストをイベントフライヤーにする</h3>
+        <div class="prompt-card__box">
+          <pre class="prompt-card__text" id="prompt-case2-b">アップロードしたイラストをメインビジュアルとして使用し、イベントを告知する高品質なフライヤーを作成してください。
+
+【入力項目】
+イベント名：
+開催日：
+開催時間：
+会場名：
+イベント内容・出店ジャンル：
+希望する雰囲気：
+画像比率：（例：縦3:4）
+
+【作成ルール】
+元イラストの構図、主役、色、描画テイストを維持してください。
+イベント名を最も大きく、開催日、時間、会場を次に読みやすく配置してください。
+情報量を絞り、スマートフォンでも日時と場所が一目で分かる文字階層にしてください。
+イラストの余白を文字配置に活用し、人物や商品の上へ大量の文字を重ねないでください。
+元イラストから色を抽出し、自然で統一感のある配色にしてください。
+地域のマルシェ、アートイベント、ライフスタイルイベントに合う、上品で親しみやすいエディトリアルデザインにしてください。
+入力した文字だけを正確に使用してください。
+意味不明な文字、架空の住所や価格、実在ロゴ、過剰な装飾、スーパーのチラシ風表現、壁や額縁のモックアップは避けてください。
+フライヤー単体を正面から見た状態で出力してください。</pre>
+        </div>
+        <button type="button" class="btn btn--copy copy-btn" data-copy-target="prompt-case2-b">
+          <span class="copy-btn__label">コピーする</span>
+          <span class="copy-btn__done">コピーしました！</span>
+        </button>
+      </div>
+
+      <div class="case__meta">
+        <div class="case__meta-block">
+          <p class="case__meta-label">今回入力した内容</p>
+          <ul>
+            <li>イベント名：GREEN WEEKEND MARKET</li>
+            <li>開催日：2026.10.18 SUN</li>
+            <li>時間：10:00–16:00</li>
+            <li>会場：HINATA PARK</li>
+            <li>内容：FLOWERS / BAKED GOODS / CERAMICS / HANDMADE</li>
+            <li>雰囲気：緑と木漏れ日を感じる、上品で親しみやすい週末マルシェ</li>
+          </ul>
+        </div>
+        <div class="case__meta-block">
+          <p class="case__meta-label">向いている用途</p>
+          <p>マルシェ／地域イベント／ワークショップ／観光イベント／季節催事</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       作例3：リビング写真 → 建築ミニチュア → 不動産ホームページ
+  ============================================================ -->
+  <section class="section case" id="case-3" aria-labelledby="case-3-heading">
+    <div class="section__inner">
+      <p class="case__number">03</p>
+      <h2 class="case__heading" id="case-3-heading">不動産や住宅紹介に<br>建築模型のようなミニチュア3Dイラスト</h2>
+      <p class="case__desc">
+        住宅や店舗の室内写真を、斜め上から眺める建築模型のようなミニチュアへ。
+        間取りや暮らし方を感覚的に伝えたい、不動産・建築・インテリア分野に向いています。
+      </p>
+
+      <div class="compare-grid">
+        <figure class="compare-item">
+          <p class="compare-item__label">元の写真</p>
+          <div class="compare-item__frame" data-placeholder="assets/living-photo.jpg">
+            <img src="assets/living-photo.jpg" alt="リビングの元写真" loading="lazy">
+          </div>
+        </figure>
+        <figure class="compare-item">
+          <p class="compare-item__label">イラストに変換</p>
+          <div class="compare-item__frame" data-placeholder="assets/living-miniature.jpg">
+            <img src="assets/living-miniature.jpg" alt="リビングを建築ミニチュア3Dイラストに変換した作例" loading="lazy">
+          </div>
+        </figure>
+        <figure class="compare-item">
+          <p class="compare-item__label">デザインに活用</p>
+          <div class="compare-item__frame" data-placeholder="assets/realestate-web.jpg">
+            <img src="assets/realestate-web.jpg" alt="建築ミニチュアを使った不動産ホームページのファーストビュー作例" loading="lazy">
+          </div>
+        </figure>
+      </div>
+
+      <p class="case__input-note">
+        【入力項目】の内容を、自分の写真や用途に合わせて書き換えてください。<br>
+        迷う項目は「おまかせ」と入力しても使えます。
+      </p>
+
+      <div class="prompt-card">
+        <h3 class="prompt-card__title">プロンプトA：写真を建築ミニチュアにする</h3>
+        <div class="prompt-card__box">
+          <pre class="prompt-card__text" id="prompt-case3-a">アップロードした建物または室内の写真を、紙の模型やアイソメトリックな建築模型のような、精巧なミニチュア3Dイラストへ変換してください。
+
+【入力項目】
+使用目的：
+建物・空間の種類：
+残したい家具・設備・特徴：
+希望する素材感：
+希望する雰囲気：
+画像比率：
+
+【作成ルール】
+元写真の間取り、家具、窓、扉、設備の位置関係を可能な限り維持してください。
+空間全体が見渡せるよう、壁の一部を取り除いたドールハウス型の構図にしてください。
+斜め上から見下ろすアイソメトリックまたは建築模型の視点で表現してください。
+木、紙、布、石などの質感を精密に表現しながら、実在の部屋ではなく模型として認識できる仕上がりにしてください。
+柔らかな自然光、穏やかな影、ニュートラルな背景を使用してください。
+家具や間取りを勝手に大きく変更したり、元写真にない部屋や人物を追加したりしないでください。
+通常の室内写真、単なるジオラマ風フィルター、ゲーム画面、過度にデフォルメした玩具風表現は避けてください。
+文字、ロゴ、署名、透かしは入れないでください。</pre>
+        </div>
+        <button type="button" class="btn btn--copy copy-btn" data-copy-target="prompt-case3-a">
+          <span class="copy-btn__label">コピーする</span>
+          <span class="copy-btn__done">コピーしました！</span>
+        </button>
+      </div>
+
+      <div class="prompt-card">
+        <h3 class="prompt-card__title">プロンプトB：不動産ホームページのメインビジュアルにする</h3>
+        <div class="prompt-card__box">
+          <pre class="prompt-card__text" id="prompt-case3-b">アップロードした建築ミニチュアイラストを使用し、架空の不動産・住宅会社のホームページのファーストビューを作成してください。
+
+【入力項目】
+会社名：
+メインコピー：
+サブコピー：
+主なメニュー：
+ボタン文言：
+希望する雰囲気：
+表示形式：（例：横長16:9のデスクトップ画面）
+
+【作成ルール】
+ミニチュアイラストを大きく使用し、建物や空間の特徴が隠れないようにしてください。
+会社名、メインコピー、問い合わせ導線が一目で分かる、信頼感のある構成にしてください。
+白、アイボリー、木の色、落ち着いたグリーンを基本に、余白の多い上品なデザインにしてください。
+不動産会社、注文住宅、リノベーション会社に合う、現代的で親しみやすいWebデザインにしてください。
+入力した文字だけを正確に使用し、意味不明な文字や不要な物件情報を追加しないでください。
+元イラストを描き直したり、写真へ戻したりしないでください。
+スマートフォンやPC本体のモックアップではなく、Webページそのものを正面から表示してください。
+実在企業のロゴ、透かし、広告、ブラウザの不要なUIは入れないでください。</pre>
+        </div>
+        <button type="button" class="btn btn--copy copy-btn" data-copy-target="prompt-case3-b">
+          <span class="copy-btn__label">コピーする</span>
+          <span class="copy-btn__done">コピーしました！</span>
+        </button>
+      </div>
+
+      <div class="case__meta">
+        <div class="case__meta-block">
+          <p class="case__meta-label">今回入力した内容</p>
+          <ul>
+            <li>用途：自然素材の住まいを紹介する不動産・住宅会社のホームページ</li>
+            <li>コンセプト：暮らしを、もっと心地よく。</li>
+            <li>雰囲気：明るいアイボリー、木の温もり、落ち着いたグリーン</li>
+            <li>主役：リビング・ダイニング・ワークスペースを再現した建築ミニチュア</li>
+          </ul>
+        </div>
+        <div class="case__meta-block">
+          <p class="case__meta-label">向いている用途</p>
+          <p>不動産会社／注文住宅／リノベーション／インテリア紹介／店舗設計</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       作例4：人物写真 → 線画＋水彩 → ブログのアイキャッチ
+  ============================================================ -->
+  <section class="section section--soft case" id="case-4" aria-labelledby="case-4-heading">
+    <div class="section__inner">
+      <p class="case__number">04</p>
+      <h2 class="case__heading" id="case-4-heading">ブログや発信の素材に<br>繊細な線画＋淡い水彩イラスト</h2>
+      <p class="case__desc">
+        人物写真を、海外のライフスタイル誌のような線画と淡い水彩のイラストへ。
+        本人らしさと柔らかな空気感を残しながら、ブログやサービス紹介に使いやすい素材にできます。
+      </p>
+
+      <div class="compare-grid">
+        <figure class="compare-item">
+          <p class="compare-item__label">元の写真</p>
+          <div class="compare-item__frame" data-placeholder="assets/woman-photo.jpg">
+            <img src="assets/woman-photo.jpg" alt="人物の元写真" loading="lazy">
+          </div>
+        </figure>
+        <figure class="compare-item">
+          <p class="compare-item__label">イラストに変換</p>
+          <div class="compare-item__frame" data-placeholder="assets/woman-watercolor.jpg">
+            <img src="assets/woman-watercolor.jpg" alt="人物写真を線画＋水彩イラストに変換した作例" loading="lazy">
+          </div>
+        </figure>
+        <figure class="compare-item">
+          <p class="compare-item__label">デザインに活用</p>
+          <div class="compare-item__frame" data-placeholder="assets/blog-eyecatch.jpg">
+            <img src="assets/blog-eyecatch.jpg" alt="人物イラストを使ったブログのアイキャッチ画像作例" loading="lazy">
+          </div>
+        </figure>
+      </div>
+
+      <p class="case__input-note">
+        【入力項目】の内容を、自分の写真や用途に合わせて書き換えてください。<br>
+        迷う項目は「おまかせ」と入力しても使えます。
+      </p>
+
+      <div class="prompt-card">
+        <h3 class="prompt-card__title">プロンプトA：人物写真を線画＋水彩にする</h3>
+        <div class="prompt-card__box">
+          <pre class="prompt-card__text" id="prompt-case4-a">アップロードした人物写真を、海外のファッション誌やライフスタイル誌に使われるような、繊細な線画＋淡い水彩のエディトリアルイラストへ変換してください。
+
+【入力項目】
+使用目的：
+希望する雰囲気：
+希望する配色：
+残したい人物の特徴：
+残したい服装・ポーズ・小物：
+背景：（残す／簡略化／おまかせ）
+画像比率：
+
+【作成ルール】
+人物の顔立ち、年代、髪型、表情、服装、姿勢を可能な限り維持してください。
+顔を過度に若くしたり、美化しすぎたり、別人に変更したりしないでください。
+細く繊細な鉛筆またはインクの線と、透明感のある淡い水彩を組み合わせてください。
+肌、髪、服は自然で上品な色合いにし、白い余白と紙の質感を生かしてください。
+背景は人物と使用目的に必要な要素を残し、主役が引き立つよう簡略化してください。
+写真風、3D風、アニメ風、太い輪郭線、過度にかわいい表現、強すぎる彩度は避けてください。
+人物、手、小物の数を勝手に変更しないでください。
+文字、ロゴ、署名、透かしは入れないでください。</pre>
+        </div>
+        <button type="button" class="btn btn--copy copy-btn" data-copy-target="prompt-case4-a">
+          <span class="copy-btn__label">コピーする</span>
+          <span class="copy-btn__done">コピーしました！</span>
+        </button>
+      </div>
+
+      <div class="prompt-card">
+        <h3 class="prompt-card__title">プロンプトB：ブログのアイキャッチにする</h3>
+        <div class="prompt-card__box">
+          <pre class="prompt-card__text" id="prompt-case4-b">アップロードしたイラストを使用し、ブログ記事に使用する横長のアイキャッチ画像を作成してください。
+
+【入力項目】
+記事カテゴリー：
+記事タイトル：
+サブコピー：
+希望する雰囲気：
+画像比率：（推奨1.91:1、1200×630相当）
+
+【作成ルール】
+完成したWebページやブラウザ画面ではなく、記事一覧や記事冒頭に配置するアイキャッチ画像単体として出力してください。
+イラストを片側へ大きく配置し、反対側にタイトル用の余白を確保してください。
+人物の顔、表情、服装、ポーズ、元イラストの線と水彩のタッチを維持してください。
+記事タイトルを最も大きく、カテゴリーとサブコピーを補助的に配置してください。
+スマートフォンの小さなサムネイルでも、人物とタイトルが一目で認識できる構成にしてください。
+元イラストから色を抽出し、余白のある上品なエディトリアルデザインにしてください。
+入力した文字だけを正確に使用してください。
+ナビゲーション、記事本文、ボタン、広告、SNSアイコン、ブラウザ枠、端末のモックアップは入れないでください。
+写真風、3D風、人物の描き直し、意味不明な文字、実在ロゴ、署名、透かしは避けてください。</pre>
+        </div>
+        <button type="button" class="btn btn--copy copy-btn" data-copy-target="prompt-case4-b">
+          <span class="copy-btn__label">コピーする</span>
+          <span class="copy-btn__done">コピーしました！</span>
+        </button>
+      </div>
+
+      <div class="case__meta">
+        <div class="case__meta-block">
+          <p class="case__meta-label">今回入力した内容</p>
+          <ul>
+            <li>カテゴリー：WORK &amp; LIFE</li>
+            <li>記事タイトル：わたしらしく、働く。</li>
+            <li>サブコピー：暮らしの中に、自分らしい仕事時間を。</li>
+            <li>比率：横1.91:1</li>
+            <li>雰囲気：温かくナチュラルなライフスタイル誌風</li>
+          </ul>
+        </div>
+        <div class="case__meta-block">
+          <p class="case__meta-label">向いている用途</p>
+          <p>ブログのアイキャッチ／OGP画像／サービス紹介／プロフィール記事／コラム挿絵</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       うまく作るための共通ポイント
+  ============================================================ -->
+  <section class="section" id="tips" aria-labelledby="tips-heading">
+    <div class="section__inner">
+      <h2 class="section__heading" id="tips-heading">うまく作るための共通ポイント</h2>
+      <ol class="tips-list">
+        <li><span class="tips-list__icon" aria-hidden="true">📷</span>元写真は、主役がはっきり見えるものを選ぶ</li>
+        <li><span class="tips-list__icon" aria-hidden="true">📝</span>残したい要素を具体的に書く</li>
+        <li><span class="tips-list__icon" aria-hidden="true">🔁</span>写真からイラスト、イラストからデザインの2段階で作る</li>
+        <li><span class="tips-list__icon" aria-hidden="true">🔤</span>文字は短く、使用する文言を指定する</li>
+        <li><span class="tips-list__icon" aria-hidden="true">🎯</span>一度で完璧を目指さず、変更箇所だけを追加で指示する</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       文字が崩れたときの対処法（修正用の追加プロンプト）
+  ============================================================ -->
+  <section class="section section--soft" id="fix-prompts" aria-labelledby="fix-prompts-heading">
+    <div class="section__inner">
+      <h2 class="section__heading" id="fix-prompts-heading">文字が崩れたときの対処法</h2>
+      <p class="section__desc">生成結果を少しだけ直したいときは、次の追加プロンプトを送ってください。</p>
+
+      <div class="prompt-card">
+        <h3 class="prompt-card__title">文字だけ直したい場合</h3>
+        <div class="prompt-card__box">
+          <pre class="prompt-card__text" id="fix-1">画像、イラスト、配色、構図、レイアウトは変更せず、間違っている文字だけを次の正しい表記へ修正してください。
+
+正しい表記：
+（ここに文字を入力）</pre>
+        </div>
+        <button type="button" class="btn btn--copy copy-btn" data-copy-target="fix-1">
+          <span class="copy-btn__label">コピーする</span>
+          <span class="copy-btn__done">コピーしました！</span>
+        </button>
+      </div>
+
+      <div class="prompt-card">
+        <h3 class="prompt-card__title">元の被写体へ近づけたい場合</h3>
+        <div class="prompt-card__box">
+          <pre class="prompt-card__text" id="fix-2">全体のイラストテイスト、配色、背景、構図は維持してください。
+主役の形、顔立ち、服装、ポーズ、個数、位置関係だけを、アップロードした元写真へさらに近づけてください。
+新しい人物や物は追加しないでください。</pre>
+        </div>
+        <button type="button" class="btn btn--copy copy-btn" data-copy-target="fix-2">
+          <span class="copy-btn__label">コピーする</span>
+          <span class="copy-btn__done">コピーしました！</span>
+        </button>
+      </div>
+
+      <div class="prompt-card">
+        <h3 class="prompt-card__title">装飾を減らしたい場合</h3>
+        <div class="prompt-card__box">
+          <pre class="prompt-card__text" id="fix-3">主役、文字、配色、全体のレイアウトは維持してください。
+周囲の装飾を半分程度に減らし、余白を増やしてください。
+よりミニマルで上品なデザインに調整してください。</pre>
+        </div>
+        <button type="button" class="btn btn--copy copy-btn" data-copy-target="fix-3">
+          <span class="copy-btn__label">コピーする</span>
+          <span class="copy-btn__done">コピーしました！</span>
         </button>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       4〜6. STEP（steps-container の中身は js/content.js の steps
-       配列から自動生成されます。ここにあるHTMLは、JavaScriptが
-       読み込めなかった場合に表示される初期表示用です）
-  ============================================================ -->
-  <div id="steps-container">
-    <section class="section step" id="step1" aria-labelledby="step1-heading">
-      <div class="section__inner reveal">
-        <p class="step__number">STEP 1</p>
-        <h2 class="step__title" id="step1-heading">気になる人気動画を見つける</h2>
-        <div class="prose">
-          <p>YouTubeやInstagramで、次のような動画を探しましょう。</p>
-          <ul class="check-list">
-            <li>最後まで見てしまった動画</li>
-            <li>再生回数が多い動画</li>
-            <li>コメントや反応が多い動画</li>
-            <li>自分の発信テーマに近い動画</li>
-            <li>なぜか気になって何度も見た動画</li>
-          </ul>
-          <p>そのまま真似するのではなく、「なぜ気になったのか」を考える参考として選びましょう。</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--soft step" id="step2" aria-labelledby="step2-heading">
-      <div class="section__inner reveal">
-        <p class="step__number">STEP 2</p>
-        <h2 class="step__title" id="step2-heading">動画のスクショを撮る</h2>
-        <div class="prose">
-          <p>動画の流れが分かるように、3〜5枚ほどスクショを撮ります。</p>
-          <ul class="check-list">
-            <li>動画のタイトルやサムネイル</li>
-            <li>冒頭の場面</li>
-            <li>内容が大きく動く場面</li>
-            <li>途中の重要な場面</li>
-            <li>最後のまとめや案内部分</li>
-          </ul>
-        </div>
-        <div class="note-box">
-          <p class="note-box__label">補足</p>
-          <p>YouTubeのURLだけでは分析できない場合があるため、スクショを送る方法がおすすめです。</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section step" id="step3" aria-labelledby="step3-heading">
-      <div class="section__inner reveal">
-        <p class="step__number">STEP 3</p>
-        <h2 class="step__title" id="step3-heading">スクショと指示文を<br>ChatGPTに送る</h2>
-        <div class="prose">
-          <p>ChatGPTを開いたら、<br>先ほど撮ったスクショを添付します。</p>
-          <p>そのあと、<br>このページにある指示文をコピーして送ってください。</p>
-          <p>難しい設定は必要ありません。</p>
-          <p>スクショを添付して、<br>指示文を貼り付けて送るだけです。</p>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- ============================================================
-       7. 結果をよくするコツ
-  ============================================================ -->
-  <section class="section" id="tips" aria-labelledby="tips-heading">
-    <div class="section__inner reveal">
-      <h2 class="section__heading" id="tips-heading">さらに分かりやすい答えを<br>出してもらうコツ</h2>
-      <div class="card-grid">
-        <div class="card">
-          <span class="card__icon" aria-hidden="true">📝</span>
-          <h3 class="card__title">自分の目的を伝える</h3>
-          <p class="card__desc">「Instagramリールの企画に使いたい」など、何に使いたいのかを伝えると、より目的に合った答えが出やすくなります。</p>
-        </div>
-        <div class="card">
-          <span class="card__icon" aria-hidden="true">🙋</span>
-          <h3 class="card__title">誰向けかを伝える</h3>
-          <p class="card__desc">「40代・50代のAI初心者向け」など、届けたい相手を伝えると、企画の方向性が具体的になります。</p>
-        </div>
-        <div class="card">
-          <span class="card__icon" aria-hidden="true">💬</span>
-          <h3 class="card__title">難しい場合は聞き直す</h3>
-          <p class="card__desc">答えが難しいと感じたら、「もっと簡単な言葉で説明してください」と追加で伝えて大丈夫です。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       8. 追加で使える質問5選
-  ============================================================ -->
-  <section class="section section--soft" id="extra-questions" aria-labelledby="extra-questions-heading">
-    <div class="section__inner reveal">
-      <h2 class="section__heading" id="extra-questions-heading">もっと深く分析したいときの<br>追加質問5選</h2>
-      <p class="section__desc">最初の分析結果を見たあと、<br>気になる質問を追加で送ってみてください。</p>
-
-      <div class="question-list" id="extra-questions-list">
-        <div class="question-card">
-          <pre class="question-card__text" id="question-1">この動画が伸びた一番大きな理由を、
-初心者にも分かるように3つ教えてください。</pre>
-          <button type="button" class="btn btn--outline copy-btn" data-copy-target="question-1" aria-label="追加質問1をコピーする">
-            <span class="copy-btn__label">コピーする</span>
-            <span class="copy-btn__done" role="status" aria-live="polite">コピーしました</span>
-          </button>
-        </div>
-        <div class="question-card">
-          <pre class="question-card__text" id="question-2">この動画の内容を、
-40代・50代の初心者向けに変えるとしたら、
-どのような企画になりますか？</pre>
-          <button type="button" class="btn btn--outline copy-btn" data-copy-target="question-2" aria-label="追加質問2をコピーする">
-            <span class="copy-btn__label">コピーする</span>
-            <span class="copy-btn__done" role="status" aria-live="polite">コピーしました</span>
-          </button>
-        </div>
-        <div class="question-card">
-          <pre class="question-card__text" id="question-3">この動画をInstagramリールにする場合、
-30秒以内の構成を考えてください。</pre>
-          <button type="button" class="btn btn--outline copy-btn" data-copy-target="question-3" aria-label="追加質問3をコピーする">
-            <span class="copy-btn__label">コピーする</span>
-            <span class="copy-btn__done" role="status" aria-live="polite">コピーしました</span>
-          </button>
-        </div>
-        <div class="question-card">
-          <pre class="question-card__text" id="question-4">このテーマを参考にしながら、
-内容が重ならない新しい企画を10個考えてください。</pre>
-          <button type="button" class="btn btn--outline copy-btn" data-copy-target="question-4" aria-label="追加質問4をコピーする">
-            <span class="copy-btn__label">コピーする</span>
-            <span class="copy-btn__done" role="status" aria-live="polite">コピーしました</span>
-          </button>
-        </div>
-        <div class="question-card">
-          <pre class="question-card__text" id="question-5">この動画の良い部分と、
-そのまま真似しない方がよい部分を教えてください。</pre>
-          <button type="button" class="btn btn--outline copy-btn" data-copy-target="question-5" aria-label="追加質問5をコピーする">
-            <span class="copy-btn__label">コピーする</span>
-            <span class="copy-btn__done" role="status" aria-live="polite">コピーしました</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       9. 注意点
+       利用時の注意
   ============================================================ -->
   <section class="section" id="caution" aria-labelledby="caution-heading">
-    <div class="section__inner reveal">
-      <h2 class="section__heading" id="caution-heading">人気動画を参考にするときの注意点</h2>
-      <div class="prose">
-        <p>参考にするのは、テーマの見せ方や構成、伝え方のヒントです。<br>文章・画像・動画をそのまま使うのは避け、自分らしい企画に変えていきましょう。</p>
+    <div class="section__inner">
+      <h2 class="section__heading" id="caution-heading">利用時の注意</h2>
+      <div class="caution-box">
+        <p class="caution-box__title">【ご利用前にご確認ください】</p>
+        <ul>
+          <li>画像生成の結果は、使用する写真や生成のたびに変わります。</li>
+          <li>生成AIは、特に小さな文字や日本語を誤って描く場合があります。</li>
+          <li>文字の正確さを最優先する場合は、文字なしの画像を生成し、Canvaなどで文字を追加してください。</li>
+          <li>人物写真を使用する場合は、ご本人の許可を得た写真を使用してください。</li>
+          <li>実在する企業、商品、キャラクター、ロゴを使用する際は、権利や利用規約を確認してください。</li>
+          <li>クライアントワークや商用利用では、使用するAIサービスの最新の利用規約をご自身で確認してください。</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       10. 最後の案内（CTA）
+       まとめ
+  ============================================================ -->
+  <section class="section section--soft" id="summary" aria-labelledby="summary-heading">
+    <div class="section__inner">
+      <h2 class="section__heading" id="summary-heading">写真は、撮ったままで終わらせなくて大丈夫。</h2>
+      <div class="prose">
+        <p>イラストのテイストを変えたり、ポスターやフライヤー、ホームページ、ブログ素材へ展開したりすることで、ひとつの写真から作れるものは大きく広がります。</p>
+        <p>まずは気になる作例をひとつ選び、自分の写真で試してみてください。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       最後の案内（CTA）
   ============================================================ -->
   <section class="section" id="cta" aria-labelledby="cta-heading">
-    <div class="section__inner reveal">
+    <div class="section__inner">
       <div class="cta-card">
         <h2 class="cta-card__heading" id="cta-heading">AIをもっと仕事や暮らしに<br>活かしてみたい方へ</h2>
         <div class="prose">
-          <p>今回紹介した方法は、<br>AIの活用法のほんの一例です。</p>
-          <p>AIを知るだけではなく、<br>実際の仕事や日々の作業にどう活かすかを知ることで、<br>できることはさらに広がります。</p>
+          <p>今回紹介したイラスト活用の方法は、<br>ChatGPTを仕事に活かす方法のほんの一例です。</p>
+          <p>写真をデザインへ展開できるようになると、<br>お店や発信、日々の仕事の中でAIを活かせる場面がどんどん広がっていきます。</p>
           <p>
             AI初心者さん向けに、<br>
             AIを仕事に活かす考え方や方法をまとめた<br>
@@ -282,7 +712,7 @@ YouTubeで人気の動画です。
           </p>
         </div>
         <a class="cta-card__banner-link" id="cta-button" href="https://sub.aione.co.jp/line/open/ErxG3f10mmcK?mtid=8LTecV7UlNz5" target="_blank" rel="noopener" aria-label="AIマネタイズの教科書を受け取る">
-          <img src="assets/images/cta-banner.png" alt="無料プレゼント AIマネタイズ教科書。AIで働き方の選択肢を広げたい方へ。LINE登録はこちら" class="cta-card__banner-img">
+          <img src="assets/cta-banner.png" alt="無料プレゼント AIマネタイズ教科書。AIで働き方の選択肢を広げたい方へ。LINE登録はこちら" class="cta-card__banner-img" loading="lazy">
         </a>
       </div>
     </div>
@@ -291,14 +721,13 @@ YouTubeで人気の動画です。
 </main>
 
 <!-- ============================================================
-     11. フッター
+     フッター
 ============================================================ -->
 <footer class="footer">
   <p>© MION</p>
   <p>このページの内容の無断転載・複製はご遠慮ください。</p>
 </footer>
 
-<script src="js/content.js"></script>
-<script src="js/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
