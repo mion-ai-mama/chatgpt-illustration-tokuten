@@ -660,6 +660,62 @@ button:focus-visible {
   color: var(--color-terracotta-dark);
 }
 
+/* どちらの工程（写真→イラスト／イラスト→デザイン）かを一目で区別するための見出し */
+.prompt-choice__step-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  font-family: var(--font-serif-jp);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 1.1rem;
+  text-align: center;
+}
+
+.prompt-choice__step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-en-serif);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: #fff;
+  padding: 0.3em 0.9em;
+  border-radius: 999px;
+}
+
+.prompt-choice__step-badge--a {
+  background: var(--color-terracotta);
+}
+
+.prompt-choice__step-badge--b {
+  background: var(--color-sage);
+}
+
+/* STEP A（写真→イラスト）とSTEP B（イラスト→デザイン）の間の矢印 */
+.prompt-flow-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  margin: -0.75rem 0 1.75rem;
+  color: var(--color-terracotta);
+}
+
+.prompt-flow-arrow span {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.prompt-flow-arrow p {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
 .prompt-option-grid {
   display: grid;
   grid-template-columns: 1fr;
